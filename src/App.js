@@ -9,9 +9,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       columnDefs: [
-        { headerName: "Domain", field: "domain" },
-        { headerName: "Scope", field: "scope" },
-        { headerName: "App", field: "app" }
+        { headerName: "Domain", field: "domain", sortable=true},
+        { headerName: "Scope", field: "scope", sortable=true},
+        { headerName: "App", field: "app", sortable=true}
       ],
       rowData: [
         { domain: "ifm", scope: "ifm:read", app: "app1" },
