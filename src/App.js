@@ -219,9 +219,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <Navigator/>
       <BrowserRouter>
         <div className="container">
+          <Navigator/>
           <Switch>
             <Route path="/" component={Api} exact />
             <Route path="/scope" component={Scope} />
