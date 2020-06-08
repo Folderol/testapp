@@ -17,7 +17,9 @@ class App extends React.Component {
       let hdrScopeID = { headerName: "Scope Id", field: "scopeId", sortable: true, filter: true };
 
       let hdrEffectiveDate = { headerName: "Effective Date", field: "effectiveDate", sortable: true, filter: true };
-      let hdrExperiationDate = { headerName: "Experiation Date", field: "experiationDate", sortable: true, filter: true };
+      let hdrExpiryDate = { headerName: "ExpiryDate", field: "expiryDate", sortable: true, filter: true };
+      let hdrCheck = { headerName: "Check", field: "check", checkBoxSelection: true};
+      
 
       let hdrAccess = { headerName: "Access", field: "access", sortable: true, filter: true };
       
@@ -28,10 +30,10 @@ class App extends React.Component {
           hdrDesc,
           hdrAccess,
           hdrEffectiveDate,
-          hdrExperiationDate
+          hdrExpiryDate
         ],
         rowData: [
-          {id:"S1", appId:"A1", name:"apiPerimissionRead",access:"read", description:"apiPerimissionRead",domain:"abc", effectiveDate: "06/03/2020 14:00:00", experiationDate:"06/029/2020 14:00:00"}
+          {id:"S1", appId:"A1", name:"apiPerimissionRead",access:"read", description:"apiPerimissionRead",domain:"abc", effectiveDate: "06/03/2020 14:00:00", expeiryDate:"06/029/2020 14:00:00"}
         ]
       }
 
@@ -87,7 +89,8 @@ class App extends React.Component {
             hdrID,
             hdrName,
             hdrDesc,
-            { headerName: "Domain Name", field: "domain", sortable: true, filter: true }
+            { headerName: "Domain Name", field: "domain", sortable: true, filter: true },
+            hdrCheck
         ],
         rowData: [
           {id:"A1",name:"apiPerimissionRead",description:"apiPerimissionRead",domain:"abc"},
@@ -104,8 +107,8 @@ class App extends React.Component {
       };
 
     this.state = {
-      columnDefs: scopeData.columnDefs,
-      rowData: scopeData.rowData
+      columnDefs: apiData.columnDefs,
+      rowData: apiData.rowData
     };
   }
 
