@@ -13,9 +13,25 @@ class App extends React.Component {
       let hdrDesc = { headerName: "Description", field: "description", sortable: true, filter: true };
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
 
-
       let hdrClientID = { headerName: "Client Id", field: "clientId", sortable: true, filter: true };
       let hdrScopeID = { headerName: "Scope Id", field: "scopeId", sortable: true, filter: true };
+
+      let hdrEffectiveDate = { headerName: "Effective Date", field: "effectiveDate", sortable: true, filter: true };
+      let hdrExperiationDate = { headerName: "Experiation Date", field: "experiationDate", sortable: true, filter: true };
+      
+      let scopeData = {
+        columnDefs: [
+          hdrID,
+          hdrName,
+          hdrDesc,
+          hdrEffectiveDate,
+          hdrExperiationDate
+        ],
+        rowData: [
+
+        ]
+
+      }
 
       let clientScopeData = {
         columnDefs: [
