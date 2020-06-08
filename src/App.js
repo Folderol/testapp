@@ -13,6 +13,27 @@ class App extends React.Component {
       let hdrDesc = { headerName: "Description", field: "description", sortable: true, filter: true };
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
 
+
+      let hdrClientID = { headerName: "client ID", field: "clientId", sortable: true, filter: true };
+      let hdrScopeID = { headerName: "scope ID", field: "scopeId", sortable: true, filter: true };
+
+      let clientScopeData = {
+        columnDefs: [
+          hdrClientID,
+          hdrScopeID
+        ],
+        rowData: [
+          {clientId:"C3",scopeId:"S3"},
+          {clientId:"C3",scopeId:"S4"},
+          {clientId:"C1",scopeId:"S3"},
+          {clientId:"C1",scopeId:"S4"},
+          {clientId:"C2",scopeId:"S3"},
+          {clientId:"C2",scopeId:"S4"},
+          {clientId:"C1",scopeId:"S12"},
+          {clientId:"C1",scopeId:"S10"}
+        ]
+      }
+
       let domainData = {
         columnDefs: [
             hdrID,
@@ -34,12 +55,12 @@ class App extends React.Component {
             hdrEnv
         ],
         rowData: [
-          {id:"C1",name:"Client1",description:"Client1",env:"Test"},
-          {id:"C2",name:"Client1",description:"Client1",env:"Prod"},
-          {id:"C3",name:"Client1",description:"Client1",env:"Dev"},
-          {id:"C4",name:"Client2",description:"Client2",env:"Test"},
-          {id:"C5",name:"Client2",description:"Client2",env:"Prod"},
-          {id:"C6",name:"Client2",description:"Client2",env:"Dev"},
+          {id:"C1",name:"1",description:"client1",env:"Test"},
+          {id:"C2",name:"1",description:"client1",env:"Prod"},
+          {id:"C3",name:"1",description:"client1",env:"Dev"},
+          {id:"C4",name:"2",description:"client2",env:"Test"},
+          {id:"C5",name:"2",description:"Client2",env:"Prod"},
+          {id:"C6",name:"2",description:"Client2",env:"Dev"},
         ]
       };
 
@@ -65,8 +86,8 @@ class App extends React.Component {
       };
 
     this.state = {
-      columnDefs: domainData.columnDefs,
-      rowData: domainData.rowData
+      columnDefs: clientScopeData.columnDefs,
+      rowData: clientScopeData.rowData
     };
   }
 
