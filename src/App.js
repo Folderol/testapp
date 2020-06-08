@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      api_data = {
+      apiData = {
         columnDefs: [
             { headerName: "Id", field: "id", sortable: true, filter: true },
             { headerName: "Name", field: "name", sortable: true, filter: true },
