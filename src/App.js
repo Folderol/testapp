@@ -6,6 +6,7 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Api from "./components/Api";
 import Scope from "./components/Scope";
+import Navigator from "./components/Navigator";
 
 class App extends React.Component {
   constructor(props) {
@@ -218,6 +219,7 @@ class App extends React.Component {
 
   render() {
     return (
+      <Navigator/>
       <BrowserRouter>
         <div className="container">
           <Switch>
