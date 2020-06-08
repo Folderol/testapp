@@ -33,7 +33,7 @@ class App extends React.Component {
     return (
       <div
         className="ag-theme-alpine"
-        style={{ height: "200px", width: "600px" }}
+        style={{ height: "500px", width: "800px" }}
       >
         <AgGridReact
           columnDefs={this.state.columnDefs}
