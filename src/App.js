@@ -11,7 +11,7 @@ class App extends React.Component {
       let hdrID = { headerName: "Id", field: "id", sortable: true, filter: true };
       let hdrName = { headerName: "Name", field: "name", sortable: true, filter: true };
       let hdrDesc = { headerName: "Description", field: "description", sortable: true, filter: true };
-      let hdrEnv = { headerName: "Env:", field: "env:", sortable: true, filter: true };
+      let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
 
       let clientData = {
         columnDefs: [
