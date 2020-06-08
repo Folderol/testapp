@@ -18,19 +18,21 @@ class App extends React.Component {
 
       let hdrEffectiveDate = { headerName: "Effective Date", field: "effectiveDate", sortable: true, filter: true };
       let hdrExperiationDate = { headerName: "Experiation Date", field: "experiationDate", sortable: true, filter: true };
+
+      let hdrAccess = { headerName: "Access", field: "access", sortable: true, filter: true };
       
       let scopeData = {
         columnDefs: [
           hdrID,
           hdrName,
           hdrDesc,
+          hdrAccess,
           hdrEffectiveDate,
           hdrExperiationDate
         ],
         rowData: [
-
+          {id:"S1", appId:"A1", name:"apiPerimissionRead",access:"read", description:"apiPerimissionRead",domain:"abc", effectiveDate: "06/03/2020 14:00:00", experiationDate:"06/029/2020 14:00:00"}
         ]
-
       }
 
       let clientScopeData = {
@@ -91,7 +93,7 @@ class App extends React.Component {
           {id:"A1",name:"apiPerimissionRead",description:"apiPerimissionRead",domain:"abc"},
           {id:"A2",name:"apiPerimissionUpdate",description:"apiPerimissionUpdate",domain:"abc"},
           {id:"A3",name:"apiPreferenceRead",description:"apiPreferenceRead",domain:"abc"},
-,          {id:"A4",name:"apiPreferenceUpdate",description:"apiPreferenceUpdate",domain:"def"},
+          {id:"A4",name:"apiPreferenceUpdate",description:"apiPreferenceUpdate",domain:"def"},
           {id:"A5",name:"apiNameDefRead",description:"apiNameDefRead",domain:"def"},
           {id:"A6",name:"apiNameDefUpdate",description:"apiNameDefUpdate",domain:"def"},
           {id:"A7",name:"validateApiCallRead",description:"validateApiCallRead",domain:"ghi"},
@@ -102,8 +104,8 @@ class App extends React.Component {
       };
 
     this.state = {
-      columnDefs: clientScopeData.columnDefs,
-      rowData: clientScopeData.rowData
+      columnDefs: scopeData.columnDefs,
+      rowData: scopeData.rowData
     };
   }
 
