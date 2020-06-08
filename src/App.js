@@ -28,8 +28,8 @@ class App extends React.Component {
           {id:"A10",name:"apiAccountUpdate",description:"apiAccountUpdate",domain:"jkl"}
         ]
       },
-      columnDefs: apiData.columnDefs,
-      rowData: apiData.rowData
+      columnDefs: apiData["columnDefs"],
+      rowData: apiData["rowData"]
     };
   }
 
