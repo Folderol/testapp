@@ -13,6 +13,17 @@ class App extends React.Component {
       let hdrDesc = { headerName: "Description", field: "description", sortable: true, filter: true };
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
 
+      let domainData = {
+            hdrID,
+            hdrDesc,
+        rowData: [
+          {id:"abc",description:"Customer"},
+          {id:"def",description:"Enterprise"},
+          {id:"ghi",description:"Managment"},
+          {id:"jkl",description:"Relations"}
+        ]
+      };
+
       let clientData = {
         columnDefs: [
             hdrID,
@@ -50,9 +61,10 @@ class App extends React.Component {
           {id:"A10",name:"apiAccountUpdate",description:"apiAccountUpdate",domain:"jkl"}
         ]
       };
+
     this.state = {
-      columnDefs: clientData.columnDefs,
-      rowData: clientData.rowData
+      columnDefs: domainData.columnDefs,
+      rowData: domainData.rowData
     };
   }
 
