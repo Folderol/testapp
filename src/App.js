@@ -14,8 +14,8 @@ class App extends React.Component {
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
 
 
-      let hdrClientID = { headerName: "client ID", field: "clientId", sortable: true, filter: true };
-      let hdrScopeID = { headerName: "scope ID", field: "scopeId", sortable: true, filter: true };
+      let hdrClientID = { headerName: "Client Id", field: "clientId", sortable: true, filter: true };
+      let hdrScopeID = { headerName: "Scope Id", field: "scopeId", sortable: true, filter: true };
 
       let clientScopeData = {
         columnDefs: [
