@@ -12,7 +12,7 @@ class App extends React.Component {
           { headerName: "Id", field: "id", sortable: true, filter: true },
           { headerName: "Name", field: "name", sortable: true, filter: true },
           { headerName: "Description", field: "description", sortable: true, filter: true },
-          { headerName: "Domain_NAME", field: "domain_name", sortable: true, filter: true }
+          { headerName: "Domain Name", field: "domain", sortable: true, filter: true }
       ],
       rowData: [
         {id:"A1",name:"apiPerimissionRead",description:"apiPerimissionRead",domain:"abc"},
