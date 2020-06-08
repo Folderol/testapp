@@ -14,8 +14,10 @@ class App extends React.Component {
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
 
       let domainData = {
+        columnDefs: [
             hdrID,
             hdrDesc,
+        ],
         rowData: [
           {id:"abc",description:"Customer"},
           {id:"def",description:"Enterprise"},
