@@ -1,4 +1,5 @@
 import React from "react";
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import "./styles.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
@@ -113,16 +114,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        className="ag-theme-alpine"
-        style={{ height: "600px", width: "900px" }}
-      >
-        <AgGridReact
-          rowSelection="multiple"
-          columnDefs={this.state.columnDefs}
-          rowData={this.state.rowData}
-        />
+      <BrowserRouter>
+      <div className="container">
+        <div className="ag-theme-alpine" style={{ height: "600px", width: "900px" }} >
+          <Switch>
+            <Route path='/' component={ <AgGridReact columnDefs={this.state.columnDefs} rowData={this.state.rowData} />} />
+            <Route path='/other' component={ <AgGridReact columnDefs={this.state.columnDefs} rowData={this.state.rowData} />} />
+          </Switch>
+        </div>
       </div>
+      </BrowserRouter>
     );
   }
 }
