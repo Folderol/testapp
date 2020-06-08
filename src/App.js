@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-      let hdrID = { headerName: "Id", field: "id", sortable: true, filter: true, checkBoxSelection = true };
+      let hdrID = { headerName: "Id", field: "id", sortable: true, filter: true, checkBoxSelection:true };
       let hdrName = { headerName: "Name", field: "name", sortable: true, filter: true };
       let hdrDesc = { headerName: "Description", field: "description", sortable: true, filter: true };
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
