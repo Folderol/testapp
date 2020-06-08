@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-      let hdrID = { headerName: "Id", field: "id", sortable: true, filter: true };
+      let hdrID = { headerName: "Id", field: "id", sortable: true, filter: true, checkBoxSelection = true };
       let hdrName = { headerName: "Name", field: "name", sortable: true, filter: true };
       let hdrDesc = { headerName: "Description", field: "description", sortable: true, filter: true };
       let hdrEnv = { headerName: "Env", field: "env", sortable: true, filter: true };
@@ -89,8 +89,7 @@ class App extends React.Component {
             hdrID,
             hdrName,
             hdrDesc,
-            { headerName: "Domain Name", field: "domain", sortable: true, filter: true },
-            hdrCheck
+            { headerName: "Domain Name", field: "domain", sortable: true, filter: true }
         ],
         rowData: [
           {id:"A1",name:"apiPerimissionRead",description:"apiPerimissionRead",domain:"abc"},
@@ -119,6 +118,7 @@ class App extends React.Component {
         style={{ height: "600px", width: "900px" }}
       >
         <AgGridReact
+          rowSelection="multiple"
           columnDefs={this.state.columnDefs}
           rowData={this.state.rowData}
         />
