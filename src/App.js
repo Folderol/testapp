@@ -2,9 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navigator from "./components/Navigator";
 import "./styles.css";
-import Api from "./components/Api";
-import Scope from "./components/Scope";
 import Gentab from "./components/Gentab";
+import Scope from "./components/Scope";
 
 class App extends React.Component {
   constructor(props) {
@@ -179,7 +178,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/" component={(routeProps) => <Gentab title="Api" tableDef={this.state.apiData} {...routeProps} /> } exact />
             <Route path="/api" component={(routeProps) => <Gentab title="Api" tableDef={this.state.apiData} {...routeProps} /> } />
-            <Route path="/scope" component={(routeProps) => <Gentab title="Scope" tableDef={this.state.apiData} {...routeProps} /> } />
+            <Route path="/scope" component={(routeProps) => <Scope title="Scope" tableDef={this.state.apiData} {...routeProps} /> } />
             <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
             <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.clientData} {...routeProps} /> } />
