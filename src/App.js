@@ -178,7 +178,7 @@ class App extends React.Component {
             <Route path="/scope" component={(routeProps) => <Gentab title="Scope" tableDef={this.state.scopeData} {...routeProps} /> } />
             <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} {...routeProps} /> } />
             <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
-            <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.domainData} {...routeProps} /> } />
+            <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.clientData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>
