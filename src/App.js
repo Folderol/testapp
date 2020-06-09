@@ -214,7 +214,7 @@ class App extends React.Component {
     this.state = {
       apiColumnDefs: apiData.columnDefs,
       apiRowData: apiData.rowData,
-      scopeColumDefs: scopeData.columnDefs,
+      scopeColumnDefs: scopeData.columnDefs,
       scopeRowData: scopeData.rowData
 
     };
