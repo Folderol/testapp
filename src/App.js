@@ -212,9 +212,11 @@ class App extends React.Component {
     };
 
     this.state = {
-      columnDefs: apiData.columnDefs,
-      rowData: apiData.rowData,
-      dataTable: apiData
+      apiColumnDefs: apiData.columnDefs,
+      apiRowData: apiData.rowData,
+      scopeColumDefs: scopeData.columnDefs,
+      scopeRowData: scopeData.rowData
+
     };
   }
 
@@ -225,10 +227,11 @@ class App extends React.Component {
           <Navigator/>
           <Switch>
             <Route path="/"
-             component={(routeProps) => <Api columnDefs={this.state.columnDefs} rowData={this.state.rowData} {...routeProps} /> }
-
+             component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> }
               exact />
-            <Route path="/scope" component={Scope} />
+            <Route path="/scope"
+             component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> }
+             />
           </Switch>
         </div>
       </BrowserRouter>
