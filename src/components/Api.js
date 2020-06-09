@@ -7,7 +7,8 @@ class Api extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      somedata: ""
+      rowData: props.dataTable.rowData,
+      columnDefs: props.dataTable.columnDefs
     };
   }
 
