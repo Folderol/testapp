@@ -162,7 +162,9 @@ class App extends React.Component {
     this.state = {
       apiData: apiData,
       scopeData: scopeData,
-      clientScopeData : clientScopeData 
+      clientScopeData : clientScopeData,
+      domainData:domainData,
+      clientData:clientData
     };
   }
 
@@ -175,6 +177,8 @@ class App extends React.Component {
             <Route path="/" component={(routeProps) => <Gentab title="Api" tableDef={this.state.apiData} {...routeProps} exact /> } />
             <Route path="/scope" component={(routeProps) => <Gentab title="Scope" tableDef={this.state.scopeData} {...routeProps} /> } />
             <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} {...routeProps} /> } />
+            <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
+            <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.domainData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>

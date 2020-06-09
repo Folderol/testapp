@@ -19,6 +19,7 @@ class Navigator extends React.Component {
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/">Api</NavLink>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/scope">Scope</NavLink>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/clientscope">Client Scope</NavLink>
+                <NavLink className="d-inline p-2 bg-dark text-white" to="/domain">Domain</NavLink>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>
