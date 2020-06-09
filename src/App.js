@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navigator from "./components/Navigator";
 import "./styles.css";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Api from "./components/Api";
 import Scope from "./components/Scope";
-import Navigator from "./components/Navigator";
+import Scope from "./components/Gentab";
 
 class App extends React.Component {
   constructor(props) {
