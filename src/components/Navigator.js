@@ -12,19 +12,18 @@ class Navigator extends React.Component {
 
   render() {
     return (
-        <div>
-            <Navbar bg="dark" expand="lg"/>
+        <Navbar bg="dark" expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav"/>
-            <NavLink className="d-inline p-2 bg-dark text-white " to="/">Api</NavLink>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/">Api</NavLink>
 
             <Navbar bg="dark" expand="lg"/>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav"/>
-            <NavLink className="d-inline p-2 bg-dark text-white " to="/scope">Scope</NavLink>
-        </div>
-    );
-  }
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/scope">Scope</NavLink>
+        </Navbar>
+        )
+    }
 }
 
 export default Navigator;
