@@ -5,8 +5,6 @@ import "./styles.css";
 import Api from "./components/Api";
 import Scope from "./components/Scope";
 import Gentab from "./components/Gentab";
-import GenScope from "./components/GenScope";
-import GenApi from "./components/GenApi";
 
 class App extends React.Component {
   constructor(props) {
@@ -162,8 +160,10 @@ class App extends React.Component {
     };
 
     this.state = {
-      apiData: apiData,
-      scopeData: scopeData,
+      apiColumnDefs:apiData.apiColumnDefs,
+      apiRowData:apiData.apiRowData,
+      scopeColumnDefs:scopeData.scopeColumnDefs,
+      scopeRowData:scopeRowData.scopeRowData,
       clientScopeData : clientScopeData,
       domainData:domainData,
       clientData:clientData
@@ -176,9 +176,9 @@ class App extends React.Component {
         <div className="container">
           <Navigator/>
           <Switch>
-            <Route path="/" component={(routeProps) => <GenApi title="Api" tableDef={this.state.apiData} {...routeProps} exact /> } />
-            <Route path="/scope" component={(routeProps) => <GenScope title="Scope" tableDef={this.state.scopeData} {...routeProps} /> } />
-            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} {...routeProps} /> } />
+             <Route path="/" component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> } exact />
+            <Route path="/scope" component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> } />
+            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
             <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.clientData} {...routeProps} /> } />
           </Switch>
