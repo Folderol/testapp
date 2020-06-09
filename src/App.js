@@ -124,12 +124,12 @@ class App extends React.Component {
     let clientData = {
       columnDefs: [hdrID, hdrName, hdrDesc, hdrEnv],
       rowData: [
-        { id: "C1", name: "1", description: "client1", env: "Test" },
-        { id: "C2", name: "1", description: "client1", env: "Prod" },
-        { id: "C3", name: "1", description: "client1", env: "Dev" },
-        { id: "C4", name: "2", description: "client2", env: "Test" },
-        { id: "C5", name: "2", description: "Client2", env: "Prod" },
-        { id: "C6", name: "2", description: "Client2", env: "Dev" }
+        { id: "C1", name: "Client1", description: "client1", env: "Test" },
+        { id: "C2", name: "Client1", description: "client1", env: "Prod" },
+        { id: "C3", name: "Client1", description: "client1", env: "Dev" },
+        { id: "C4", name: "Client2", description: "client2", env: "Test" },
+        { id: "C5", name: "Client2", description: "Client2", env: "Prod" },
+        { id: "C6", name: "Client2", description: "Client2", env: "Dev" }
       ]
     };
 
@@ -180,8 +180,8 @@ class App extends React.Component {
             <Route path="/api" component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> } exact />
             <Route path="/scope" component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
-            <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
-            <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.clientData} {...routeProps} /> } />
+            <Route path="/domain" component={(routeProps) => <Gentab title={"Domain"} tableDef={this.state.domainData} {...routeProps} /> } />
+            <Route path="/client" component={(routeProps) => <Gentab title={"Client"} tableDef={this.state.clientData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>
