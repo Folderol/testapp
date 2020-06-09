@@ -178,8 +178,8 @@ class App extends React.Component {
         <div className="container">
           <Navigator/>
           <Switch>
-            <Route path="/" component={(routeProps) => <Gentab title="Api" tableDef={this.state.domainData} {...routeProps} /> } exact />
-            <Route path="/api" component={(routeProps) => <Gentab title="Api" tableDef={this.state.domainData} {...routeProps} /> } />
+            <Route path="/" component={(routeProps) => <Gentab title="Api" tableDef={this.state.apiData} {...routeProps} /> } exact />
+            <Route path="/api" component={(routeProps) => <Gentab title="Api" tableDef={this.state.apiData} {...routeProps} /> } />
             <Route path="/scope" component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
