@@ -14,12 +14,12 @@ class Navigator extends React.Component {
     return (
             <Navbar bg="dark" expand="lg">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav"/>
-
+                <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/">Api</NavLink>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/scope">Scope</NavLink>
                 </Nav>
+                </Navbar.Collapse>
             </Navbar>
         )
     }
