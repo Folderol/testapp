@@ -225,7 +225,7 @@ class App extends React.Component {
           <Navigator/>
           <Switch>
             <Route path="/"
-             component={(routeProps) => <Api props={this.dataTable}  {...routeProps} /> }
+             component={(routeProps) => <Api columnDefs={this.columnDefs} rowData={this.rowData} {...routeProps} /> }
 
               exact />
             <Route path="/scope" component={Scope} />
