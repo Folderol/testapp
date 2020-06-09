@@ -3,7 +3,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
-class Gentab extends React.Component {
+class GenApi extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
