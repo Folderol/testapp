@@ -160,10 +160,10 @@ class App extends React.Component {
     };
 
     this.state = {
-      apiColumnDefs:apiData.apiColumnDefs,
-      apiRowData:apiData.apiRowData,
-      scopeColumnDefs:scopeData.scopeColumnDefs,
-      scopeRowData:scopeRowData.scopeRowData,
+      apiColumnDefs:apiData.columnDefs,
+      apiRowData:apiData.rowData,
+      scopeColumnDefs:scopeData.columnDefs,
+      scopeRowData:scopeRowData.rowData,
       clientScopeData : clientScopeData,
       domainData:domainData,
       clientData:clientData
