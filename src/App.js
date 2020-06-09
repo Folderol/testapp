@@ -2,9 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navigator from "./components/Navigator";
 import "./styles.css";
-import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/dist/styles/ag-grid.css";
-import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Api from "./components/Api";
 import Scope from "./components/Scope";
 import Gentab from "./components/Gentab";
@@ -163,12 +160,9 @@ class App extends React.Component {
     };
 
     this.state = {
-      apiColumnDefs: apiData.columnDefs,
-      apiRowData: apiData.rowData,
-      scopeColumnDefs: scopeData.columnDefs,
-      scopeRowData: scopeData.rowData,
+      apiData: apiData,
+      scopeData: scopeData,
       clientScopeData : clientScopeData 
-
     };
   }
 
@@ -178,9 +172,9 @@ class App extends React.Component {
         <div className="container">
           <Navigator/>
           <Switch>
-            <Route path="/" component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> } exact />
-            <Route path="/scope" component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> } />
-            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
+            <Route path="/" component={(routeProps) => <Gentab title="Api" tableDef={this.state.apiData} {...routeProps} exact /> } />
+            <Route path="/scope" component={(routeProps) => <Gentab title="Scope" tableDef={this.state.scopeData} {...routeProps} /> } />
+            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>
