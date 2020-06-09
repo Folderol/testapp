@@ -148,66 +148,16 @@ class App extends React.Component {
         }
       ],
       rowData: [
-        {
-          id: "A1",
-          name: "apiPerimissionRead",
-          description: "apiPerimissionRead",
-          domain: "abc"
-        },
-        {
-          id: "A2",
-          name: "apiPerimissionUpdate",
-          description: "apiPerimissionUpdate",
-          domain: "abc"
-        },
-        {
-          id: "A3",
-          name: "apiPreferenceRead",
-          description: "apiPreferenceRead",
-          domain: "abc"
-        },
-        {
-          id: "A4",
-          name: "apiPreferenceUpdate",
-          description: "apiPreferenceUpdate",
-          domain: "def"
-        },
-        {
-          id: "A5",
-          name: "apiNameDefRead",
-          description: "apiNameDefRead",
-          domain: "def"
-        },
-        {
-          id: "A6",
-          name: "apiNameDefUpdate",
-          description: "apiNameDefUpdate",
-          domain: "def"
-        },
-        {
-          id: "A7",
-          name: "validateApiCallRead",
-          description: "validateApiCallRead",
-          domain: "ghi"
-        },
-        {
-          id: "A8",
-          name: "validateApiCallUpdate",
-          description: "validateApiCallUpdate",
-          domain: "ghi"
-        },
-        {
-          id: "A9",
-          name: "apiAcccountInfoRead",
-          description: "apiAcccountInfoRead",
-          domain: "jkl"
-        },
-        {
-          id: "A10",
-          name: "apiAccountUpdate",
-          description: "apiAccountUpdate",
-          domain: "jkl"
-        }
+        { id: "A1", name: "apiPerimissionRead", description: "apiPerimissionRead", domain: "abc" },
+        { id: "A2", name: "apiPerimissionUpdate", description: "apiPerimissionUpdate", domain: "abc" },
+        { id: "A3", name: "apiPreferenceRead", description: "apiPreferenceRead", domain: "abc" },
+        { id: "A4", name: "apiPreferenceUpdate", description: "apiPreferenceUpdate", domain: "def" },
+        { id: "A5", name: "apiNameDefRead", description: "apiNameDefRead", domain: "def" },
+        { id: "A6", name: "apiNameDefUpdate", description: "apiNameDefUpdate", domain: "def" },
+        { id: "A7", name: "validateApiCallRead", description: "validateApiCallRead", domain: "ghi" },
+        { id: "A8", name: "validateApiCallUpdate", description: "validateApiCallUpdate", domain: "ghi" },
+        { id: "A9", name: "apiAcccountInfoRead", description: "apiAcccountInfoRead", domain: "jkl" },
+        { id: "A10", name: "apiAccountUpdate", description: "apiAccountUpdate", domain: "jkl" }
       ]
     };
 
@@ -215,7 +165,8 @@ class App extends React.Component {
       apiColumnDefs: apiData.columnDefs,
       apiRowData: apiData.rowData,
       scopeColumnDefs: scopeData.columnDefs,
-      scopeRowData: scopeData.rowData
+      scopeRowData: scopeData.rowData,
+      clientScopeData : clientScopeData 
 
     };
   }
@@ -226,12 +177,9 @@ class App extends React.Component {
         <div className="container">
           <Navigator/>
           <Switch>
-            <Route path="/"
-             component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> }
-              exact />
-            <Route path="/scope"
-             component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> }
-             />
+            <Route path="/" component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> } exact />
+            <Route path="/scope" component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> } />
+            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>
