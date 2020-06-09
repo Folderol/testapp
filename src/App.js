@@ -163,7 +163,7 @@ class App extends React.Component {
       apiColumnDefs:apiData.columnDefs,
       apiRowData:apiData.rowData,
       scopeColumnDefs:scopeData.columnDefs,
-      scopeRowData:scopeRowData.rowData,
+      scopeRowData:scopeData.rowData,
       clientScopeData : clientScopeData,
       domainData:domainData,
       clientData:clientData
