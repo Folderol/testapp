@@ -9,16 +9,23 @@ class Gentab extends React.Component {
     this.state = {
       rowData: props.tableDef.rowData,
       columnDefs: props.tableDef.columnDefs,
-      theTitle: props.title
+      title: props.title
     };
   }
 
   render() {
     return (
       <div>
-        <h1>{this.title}</h1>
-        <div className="ag-theme-alpine" style={{ height: "600px", width: "900px" }} >
-        <AgGridReact columnDefs={this.state.columnDefs} rowData={this.state.rowData} />
+        <h1>{this.state.title}</h1>
+        <br />
+        <div
+          className="ag-theme-alpine"
+          style={{ height: "600px", width: "900px" }}
+        >
+          <AgGridReact
+            columnDefs={this.state.columnDefs}
+            rowData={this.state.rowData}
+          />
         </div>
       </div>
     );

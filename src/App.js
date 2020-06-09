@@ -112,6 +112,7 @@ class App extends React.Component {
     };
 
     let domainData = {
+      title: "Domain",
       columnDefs: [hdrID, hdrDesc],
       rowData: [
         { id: "abc", description: "Customer" },
@@ -180,8 +181,8 @@ class App extends React.Component {
             <Route path="/api" component={(routeProps) => <Api columnDefs={this.state.apiColumnDefs} rowData={this.state.apiRowData} {...routeProps} /> } exact />
             <Route path="/scope" component={(routeProps) => <Scope columnDefs={this.state.scopeColumnDefs} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
-            <Route path="/domain" component={(routeProps) => <Gentab title={"Domain"} tableDef={this.state.domainData} {...routeProps} /> } />
-            <Route path="/client" component={(routeProps) => <Gentab title={"Client"} tableDef={this.state.clientData} {...routeProps} /> } />
+            <Route path="/domain" component={(routeProps) => <Gentab title="Domain" tableDef={this.state.domainData} {...routeProps} /> } />
+            <Route path="/client" component={(routeProps) => <Gentab title="Client" tableDef={this.state.clientData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>
