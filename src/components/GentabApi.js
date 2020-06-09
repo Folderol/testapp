@@ -25,4 +25,4 @@ class GenApi extends React.Component {
   }
 }
 
-export default Scope;
+export default GenApi;

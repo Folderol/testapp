@@ -25,4 +25,4 @@ class Gentab extends React.Component {
   }
 }
 
-export default Scope;
+export default Gentab;

@@ -6,7 +6,7 @@ import Api from "./components/Api";
 import Scope from "./components/Scope";
 import Gentab from "./components/Gentab";
 import GenScope from "./components/GenScope";
-import GenScope from "./components/GenApi";
+import GenApi from "./components/GenApi";
 
 class App extends React.Component {
   constructor(props) {

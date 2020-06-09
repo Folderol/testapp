@@ -6,3 +6,5 @@ class GenScope extends Gentab
         super(props);
     }
 }
+
+export default GenScope;
