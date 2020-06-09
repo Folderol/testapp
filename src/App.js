@@ -7,7 +7,7 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import Api from "./components/Api";
 import Scope from "./components/Scope";
-import Scope from "./components/Gentab";
+import Gentab from "./components/Gentab";
 
 class App extends React.Component {
   constructor(props) {
