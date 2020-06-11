@@ -4,6 +4,7 @@ import Navigator from "./components/Navigator";
 import "./styles.css";
 import Gentab from "./components/Gentab";
 import Scope from "./components/Scope";
+import EditButton from './components/EditButton'
 
 class App extends React.Component {
   constructor(props) {
@@ -66,6 +67,16 @@ class App extends React.Component {
       checkBoxSelection: true
     };
 
+    let hdrEdit = {
+      headerName: 'Edit',
+      field: 'value',
+      cellRenderer: 'EditButton',
+      colId: 'params',
+      width: 180,    header: "Edit",
+      filterable: false,
+
+    }
+
     let hdrAccess = {
       headerName: "Access",
       field: "access",
@@ -112,7 +123,7 @@ class App extends React.Component {
 
     let domainData = {
       title: "Domain",
-      columnDefs: [hdrID, hdrDesc],
+      columnDefs: [hdrID, hdrDesc, hdrEdit],
       rowData: [
         { id: "abc", description: "Customer" },
         { id: "def", description: "Enterprise" },
@@ -166,8 +177,13 @@ class App extends React.Component {
       scopeRowData:scopeData.rowData,
       clientScopeData : clientScopeData,
       domainData:domainData,
-      clientData:clientData
+      clientData:clientData,
+      context: { componentParent: this },
     };
+  }
+
+  methodFromParent = cell => {
+    alert('Parent Component Method from ' + cell + '!');
   }
 
   render() {
