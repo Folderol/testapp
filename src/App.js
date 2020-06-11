@@ -14,8 +14,7 @@ class App extends React.Component {
       headerName: "Id",
       field: "id",
       sortable: true,
-      filter: true,
-      checkBoxSelection: true
+      filter: true
     };
     let hdrName = {
       headerName: "Name",
@@ -125,10 +124,10 @@ class App extends React.Component {
       title: "Domain",
       columnDefs: [hdrID, hdrDesc, hdrEdit],
       rowData: [
-        { id: "abc", description: "Customer" },
-        { id: "def", description: "Enterprise" },
-        { id: "ghi", description: "Managment" },
-        { id: "jkl", description: "Relations" }
+        { id: "abc", description: "Customer", edit },
+        { id: "def", description: "Enterprise", edit },
+        { id: "ghi", description: "Managment", edit },
+        { id: "jkl", description: "Relations", edit }
       ]
     };
 

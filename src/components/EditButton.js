@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ChildMessageRenderer extends Component {
+export default class EditButton extends Component {
   constructor(props) {
     super(props);
 
