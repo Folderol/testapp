@@ -5,6 +5,7 @@ import "./styles.css";
 import Gentab from "./components/Gentab";
 import Scope from "./components/Scope";
 import EditButton from './components/EditButton'
+import DeleteButton from './components/DeleteButton'
 
 class App extends React.Component {
   constructor(props) {
