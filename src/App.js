@@ -70,6 +70,7 @@ class App extends React.Component {
       headerName: 'Edit',
       field: 'value',
       cellRenderer: EditButton,
+      cellRendererParams: {props: 'some prop'},
       colId: 'params',
       width: 180,    header: "Edit",
       filterable: false,
