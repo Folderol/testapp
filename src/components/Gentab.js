@@ -24,6 +24,7 @@ class Gentab extends React.Component {
           style={{ height: "600px", width: "900px" }}
         >
           <AgGridReact
+            rowSelection="single"
             columnDefs={this.state.columnDefs}
             rowData={this.state.rowData}
             context={this.state.context}
