@@ -9,7 +9,8 @@ class Gentab extends React.Component {
     this.state = {
       rowData: props.tableDef.rowData,
       columnDefs: props.tableDef.columnDefs,
-      title: props.title
+      title: props.title,
+      context: props.context
     };
   }
 
@@ -25,6 +26,7 @@ class Gentab extends React.Component {
           <AgGridReact
             columnDefs={this.state.columnDefs}
             rowData={this.state.rowData}
+            context={this.state.context}
           />
         </div>
       </div>
