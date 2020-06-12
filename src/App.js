@@ -77,6 +77,16 @@ class App extends React.Component {
 
     }
 
+    let hdrDelete = {
+      headerName: 'Delete',
+      field: 'value',
+      cellRendererFramework: DeleteButton,
+      colId: 'params',
+      width: 180,    header: "Delete",
+      filterable: false,
+
+    }
+
     let hdrAccess = {
       headerName: "Access",
       field: "access",
@@ -92,7 +102,8 @@ class App extends React.Component {
         hdrAccess,
         hdrEffectiveDate,
         hdrExpiryDate,
-	hdrEdit
+	      hdrEdit,
+	      hdrDelete
       ],
       rowData: [
         {
@@ -109,7 +120,7 @@ class App extends React.Component {
     };
 
     let clientScopeData = {
-      columnDefs: [hdrClientID, hdrScopeID, hdrEdit],
+      columnDefs: [hdrClientID, hdrScopeID, hdrEdit, hdrDelete],
       rowData: [
         { clientId: "C3", scopeId: "S3" },
         { clientId: "C3", scopeId: "S4" },
@@ -124,7 +135,7 @@ class App extends React.Component {
 
     let domainData = {
       title: "Domain",
-      columnDefs: [hdrID, hdrDesc, hdrEdit],
+      columnDefs: [hdrID, hdrDesc, hdrEdit, hdrDelete],
       rowData: [
         { id: "abc", description: "Customer" },
         { id: "def", description: "Enterprise"},
@@ -134,7 +145,7 @@ class App extends React.Component {
     };
 
     let clientData = {
-      columnDefs: [hdrID, hdrName, hdrDesc, hdrEnv, hdrEdit],
+      columnDefs: [hdrID, hdrName, hdrDesc, hdrEnv, hdrEdit, hdrDelete],
       rowData: [
         { id: "C1", name: "Client1", description: "client1", env: "Test" },
         { id: "C2", name: "Client1", description: "client1", env: "Prod" },
@@ -156,7 +167,8 @@ class App extends React.Component {
           sortable: true,
           filter: true
         },
-        hdrEdit
+        hdrEdit,
+        hdrDelete
       ],
       rowData: [
         { id: "A1", name: "apiPerimissionRead", description: "apiPerimissionRead", domain: "abc" },
