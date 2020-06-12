@@ -15,6 +15,14 @@ class Gentab extends React.Component {
     };
   }
 
+  
+  onGridReady = (params) =>  {
+      //alert('Grid is ready' );
+      this.api = params.api;
+      this.columnApi = params.columnApi;
+      this.columnApi.autoSizeAllColumns(false);
+  }
+
   render() {
     return (
       <div>
@@ -25,6 +33,7 @@ class Gentab extends React.Component {
           style={{ height: "600px", width: "900px" }}
         >
           <AgGridReact
+            onGridReady={this.onGridReady}
             rowSelection="single"
             defaultColDef={this.state.defaultColDef}
             columnDefs={this.state.columnDefs}
