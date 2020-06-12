@@ -69,7 +69,7 @@ class App extends React.Component {
     let hdrEdit = {
       headerName: 'Edit',
       field: 'value',
-      cellRenderer: EditButton,
+      cellRenderer: 'EditButton',
       cellRendererParams: {props: 'some prop'},
       colId: 'params',
       width: 180,    header: "Edit",
