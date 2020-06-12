@@ -9,6 +9,7 @@ class Gentab extends React.Component {
     this.state = {
       rowData: props.tableDef.rowData,
       columnDefs: props.tableDef.columnDefs,
+      defaultColDef: props.tableDef.defaultColDef,
       title: props.title,
       context: props.context
     };
@@ -25,6 +26,7 @@ class Gentab extends React.Component {
         >
           <AgGridReact
             rowSelection="single"
+            defaultColDef={this.state.defaultColDef}
             columnDefs={this.state.columnDefs}
             rowData={this.state.rowData}
             context={this.state.context}

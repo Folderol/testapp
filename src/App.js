@@ -158,6 +158,7 @@ class App extends React.Component {
     };
 
     let apiData = {
+      defaultColDef: { editable: true },
       columnDefs: [
         hdrID,
         hdrName,
@@ -169,7 +170,7 @@ class App extends React.Component {
           filter: true
         },
         hdrEdit,
-        hdrDelete
+        hdrDelete,
       ],
       rowData: [
         { id: "A1", name: "apiPerimissionRead", description: "apiPerimissionRead", domain: "abc" },
@@ -193,7 +194,7 @@ class App extends React.Component {
       clientScopeData : clientScopeData,
       domainData:domainData,
       clientData:clientData,
-      context: { componentParent: this },
+      context: { componentParent: this }
     };
   }
 
