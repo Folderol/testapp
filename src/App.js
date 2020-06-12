@@ -149,13 +149,13 @@ class App extends React.Component {
         hdrID,
         hdrName,
         hdrDesc,
-	hdrEdit
-        {
+	      {
           headerName: "Domain Name",
           field: "domain",
           sortable: true,
           filter: true
-        }
+        },
+        hdrEdit
       ],
       rowData: [
         { id: "A1", name: "apiPerimissionRead", description: "apiPerimissionRead", domain: "abc" },
