@@ -21,7 +21,7 @@ export default class EditButton extends React.Component {
           onClick={this.invokeParentMethod}
           className="btn btn-info"
         >
-          Invoke Parent
+         Edit 
         </button>
       </span>
     );
