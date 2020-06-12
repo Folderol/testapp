@@ -193,12 +193,12 @@ class App extends React.Component {
         <div className="container">
           <Navigator/>
           <Switch>
-            <Route path="/" component={(routeProps) => <Gentab title="Api" context={this.state.context tableDef={this.state.apiData} {...routeProps} /> } exact />
-            <Route path="/api" component={(routeProps) => <Gentab title="Api" context={this.state.context tableDef={this.state.apiData} {...routeProps} /> } />
-            <Route path="/scope" component={(routeProps) => <Scope title="Scope" context={this.state.context tableDef={this.state.scopeData} {...routeProps} /> } />
-            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" context={this.state.context tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
+            <Route path="/" component={(routeProps) => <Gentab title="Api" context={this.state.context} tableDef={this.state.apiData} {...routeProps} /> } exact />
+            <Route path="/api" component={(routeProps) => <Gentab title="Api" context={this.state.context} tableDef={this.state.apiData} {...routeProps} /> } />
+            <Route path="/scope" component={(routeProps) => <Scope title="Scope" context={this.state.context} tableDef={this.state.scopeData} {...routeProps} /> } />
+            <Route path="/clientscope" component={(routeProps) => <Gentab title="Client Scope" context={this.state.context} tableDef={this.state.clientScopeData} rowData={this.state.scopeRowData} {...routeProps} /> } />
             <Route path="/domain" component={(routeProps) => <Gentab title="Domain" context={this.state.context} tableDef={this.state.domainData} {...routeProps} /> } />
-            <Route path="/client" component={(routeProps) => <Gentab title="Client" context={this.state.context tableDef={this.state.clientData} {...routeProps} /> } />
+            <Route path="/client" component={(routeProps) => <Gentab title="Client" context={this.state.context} tableDef={this.state.clientData} {...routeProps} /> } />
           </Switch>
         </div>
       </BrowserRouter>
