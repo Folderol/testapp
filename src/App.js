@@ -14,6 +14,7 @@ class App extends React.Component {
       headerName: "Id",
       field: "id",
       sortable: true,
+      checkBoxSelection: true
       filter: true
     };
     let hdrName = {
