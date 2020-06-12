@@ -4,12 +4,12 @@ export default class EditButton extends React.Component {
   constructor(props) {
     super(props);
 
-    this.invokeParentMethod = this.invokeParentMethod.bind(this);
+    this.AgGridReact.invokeParentMethod = this.AgGridReact.invokeParentMethod.bind(this);
   }
 
   invokeParentMethod() {
-    this.props.context.componentParent.methodFromParent(
-      `Row: ${this.props.node.rowIndex}, Col: ${this.props.colDef.headerName}`
+    this.AgGridReact.props.context.componentParent.methodFromParent(
+      `Row: ${this.AgGridReact.props.node.rowIndex}, Col: ${this.AgGridReact.props.colDef.headerName}`
     );
   }
 
