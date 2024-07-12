@@ -8,7 +8,7 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "ag-grid-community": "23.1.1",
+    "ag-grid-community": "32.0.1",
     "ag-grid-react": "23.1.1",
     "bootstrap": "4.5.0",
     "react": "16.12.0",
